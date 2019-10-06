@@ -1,0 +1,438 @@
+
+body{
+    background-image: linear-gradient(to right,rgb(224, 224, 224,1), rgb(36, 217, 226,1), rgb(224, 224, 224,1));
+    font-family: monospace !important;
+    margin: 0;
+
+}
+
+/* general styling for the whole application */
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    display: flex;
+    max-width: 100%;
+    font-size: 0.8rem;
+    background: none;
+    border: black solid 2px;
+    padding: 7%;
+    margin-bottom: 5%;
+}
+input:focus{
+    background-color: white;
+}
+
+.custom-button-styles{
+    display: block;
+    position: relative;
+    outline: none;
+    margin: 5% auto;
+    text-decoration: none;
+    border: black solid 2px;
+    color: black;
+    font-size: 1.5em;
+    background-color: white;
+    padding: 4% 8%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px black;
+}
+
+.custom-button-styles:active{
+    box-shadow: 2.5px 7.5px 2.5px black;
+    top: 4px;
+    left: 2px;
+}
+
+/* start page section */
+
+#start-page{
+
+    max-width: 20%;
+    border-radius: 10px;
+    border: solid black 3px;
+    padding: 4%;
+    padding-top: 2%;
+    margin: 5% auto;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+}
+
+#start-page-login-button{
+    padding: 4% 11.57%;
+}
+
+/* login page section */
+
+#login-page{
+    max-width: 20%;
+    border-radius: 10px;
+    border: solid black 3px;
+    padding: 4%;
+    padding-top: 2%;
+    margin: 5% auto;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+}
+
+
+/* signup section */
+
+#signup-page{
+    max-width: 20%;
+    border-radius: 10px;
+    border: solid black 3px;
+    padding: 4%;
+    padding-top: 2%;
+    margin: 5% auto;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+}
+
+#terms{
+    display: inline-flex;
+}
+
+#terms input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+#terms-of-use{
+    margin-left: 6px;
+    padding-top: 4px;
+    font-size: 1rem;
+}
+
+/* error message */
+#invalid-email-error-message, #user-doesnt-exist-error-message, #user-exists-error-message{
+    display: none;
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#login-form-error-message, #signup-form-error-message, #first-name-error-message, #last-name-error-message{
+    display: none;
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#email-error-message, #password-error-message, #terms-error-message, #todo-title-error-message{
+    display: none;
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#user-details-error-message, #new-password-error-message, .saved-todo-title-error-message, #wrong-password-error-message{
+    display: none;
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#user-details-success, #list-saved-message{
+    display: none;
+    color: green;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.title-message{
+    color: green;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* dashboard section */
+
+.nav-menu{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    background-color: grey;
+    z-index: 100;
+}
+
+/* style the dashboard buttons differently to the rest of the application */
+.alt-button-style{
+    padding: 1%;
+    margin: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.nav-menu-buttons{
+    padding: 2%;
+    padding-left: 1%;
+}
+
+#new-todo-button{
+    margin:auto;
+    padding-left: 2%;
+}
+
+.new-todo-button-toggle-display{
+    display: none;
+}
+
+/* user settings  */
+
+.user-settings-div{
+    display: none;
+    max-width: 70%;
+    height: auto;
+    margin: 5% auto;
+    border: solid black 3px;
+    box-shadow: 0 0 5px black;
+
+}
+
+.user-settings-div p{
+    text-align: center;
+}
+
+.user-settings-div h2{
+    text-align: center;
+}
+
+.user-settings-div label, .user-settings-div input{
+    text-align: center;
+}
+#user-details-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+#user-details-section input{
+    padding: 10px;
+}
+#changes-reminder{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#first-name-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#last-name-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#password-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.new-password-input{
+    margin: 1% auto;
+    padding: 1%;
+}
+.new-password-label{
+    display: block;
+    margin: 1%;
+    text-align: center;
+}
+
+#show-password-button{
+    font-size: 0.7rem;
+    padding: 3%;
+    margin: auto; 
+    box-shadow: none;
+}
+
+.user-settings-display-toggle{
+    display: block;
+    
+}
+.user-settings-close-button{
+    position: relative;
+    top: 4px;
+    left: 95%;
+    background: none;
+    outline: none;
+    border:none;
+}
+
+.change-details-button{
+    padding: 1% 2%;
+    margin-top: 2%;
+}
+
+.delete-account-button{
+    padding: 1% 2%;
+    color: red;
+    margin-top: 1%;
+}
+
+#delete-button-message{
+    text-align: center;
+    color: red;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+
+/* todo list stuff */
+
+.todo{
+    width: 300px;
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    margin-top: 4%;
+    border: solid black 2px;
+}
+
+#new-todo-item{
+    display: none;
+    align-self: center;
+}
+
+.new-todo-toggle-display{
+    display: none;
+}
+
+#todo-edit-title{
+    visibility: hidden;
+    display: flex;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: blue;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+#todo-edit-title:focus{
+    background: none;
+}
+
+#a-todo-list{
+    display: none;
+    font-size: 1.2rem;
+    padding-left: 0;
+}
+ul{
+    font-size: 1.2rem;
+    padding-left: 0;
+}
+
+li{
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding-left: 0px;
+    margin-left: 35px;
+    margin-right: 30px;
+    word-wrap: break-word;
+    background-color: #f7fcff;
+}
+
+li:nth-child(2n){
+    background-color: #e5e5e5;
+}
+
+li span{
+    font-size: 0.8rem;
+    width: 0px;
+    opacity: 0;
+    transition: 0.4s;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    color: white;
+    padding-left: 10px;
+    background-color: red;
+}
+
+li:hover span{
+    width: 10px;
+    opacity: 1;
+}
+
+#a-todo-list li:hover span{
+    width: 10px;
+    opacity: 1;
+}
+
+/* add this to each list-item through javascript */
+.done-list-item{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+#save-new-todo{
+    display: none;
+}
+
+#todo-list-title-input{
+    display: block;
+    align-self: center;
+    max-height: 20px;
+    margin-top: 1%;
+}
+
+/* saved todos */
+
+.saved-todo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.todo-edit-title{
+    display: flex;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: blue;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.todo-edit-title:focus{
+    background: none;
+}
+
+.saved-todos-delete-button{
+    color: red;
+    font-size: 1rem;
+    margin: 2% auto;
+    box-shadow: 5px 5px 10px;
+}
+
+.saved-todos-changes-button{
+    color: green;
+    font-size: 1rem;
+    margin: 2% auto;
+    box-shadow: 5px 5px 10px;
+}
+.saved-todos-changes-button:active{
+    box-shadow: 2.5px 7.5px 2.5px;
+    top: 4px;
+    left: 2px;
+}
+
+.delete-account-button:active{
+    box-shadow: 2.5px 7.5px 2.5px;
+    top: 4px;
+    left: 2px;
+}
